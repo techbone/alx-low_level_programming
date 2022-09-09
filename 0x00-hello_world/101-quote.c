@@ -2,7 +2,6 @@
 
 /**
  * main - print
- * 
  * Return: Always 1 (successful)
  */
 int main(void)
