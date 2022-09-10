@@ -2,14 +2,15 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * *main- Entry point
- * *
- * *Description: program will assign a random number to the variable n
- * *Return: Always 0 (Success/correct)
- * */
+  *main- Entry point
+  *
+  *Description: program will assign a random number to the variable n
+  *Return: Always 0 (Success/correct)
+  */
 int main(void)
 {
 	int n;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
