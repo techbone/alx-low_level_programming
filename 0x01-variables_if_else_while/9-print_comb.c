@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- *  * main - entry point
- *   * print all possible combination of single digit numbers
- *    * Return: Alwasy 0 (Success)
- *     */
+  * main - entry point
+  * print all possible combination of single digit numbers
+  * Return: Alwasy 0 (Success)
+  */
 int main(void)
 {
 	int n;
