@@ -1,22 +1,25 @@
 #include "main.h"
+
 /**
-  * jack_bauer - main character
+  * jack_bauer - prints every minute of jack bauer day
+  * no need for parameter
+  * Return: does not return anything
   */
 
 void jack_bauer(void)
 {
-		int i;
-		int j;
+	int h, m;
 
-		for (i = 0; i <= 23; i++)
+	for (h = 0; h < 24; h++)
+	{
+		for (m = 0; m < 60; m++)
 		{
-			for (j = 0; j <= 59; j++)
-			{
-				_putchar(i / 10 + '0');
-				_putchar(i % 10 + '0');																			_putchar(':');
-				_putchar(j / 10 + '0');
-				_putchar(j % 10 + '0');
-				_putchar('\n');
-			}
+			_putchar('0' + (h / 10));
+			_putchar('0' + (h % 10));
+			_putchar(':');
+			_putchar('0' + (m / 10));
+			_putchar('0' + (m % 10));
+			_putchar('\n');
 		}
+	}
 }
