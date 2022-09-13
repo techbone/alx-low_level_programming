@@ -2,7 +2,6 @@
 
 /**
   * main - print _putchar followed by a new line
-  *
   * Return: on success 0
   */
 
