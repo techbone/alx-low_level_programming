@@ -2,7 +2,7 @@
 #include "6-abs.c"
 
 /**
-  * print_last_digit - main function
+  * print_last_digit 
   * @n: integer to get last digit of
   * turn: last digit of n
   */
