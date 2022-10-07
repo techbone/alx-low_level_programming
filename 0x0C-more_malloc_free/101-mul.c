@@ -18,7 +18,6 @@ void _is_zero(char *argv[])
 			isn1 = 0;
 			break;
 		}
-
 	for (i = 0; argv[2][i]; i++)
 		if (argv[2][i] != '0')
 		{
@@ -65,14 +64,13 @@ int _checknum(char *argv[], int n)
 			printf("Error\n");
 			exit(98);
 		}
-
 	return (ln);
 }
 
 /**
  * main - Entry point.
  * program that multiplies two positive numbers.
- * @argc: number of arguments
+ * @argc: number of arguments.
  * @argv: arguments vector.
  * Return: 0 - success.
  */
@@ -119,4 +117,3 @@ int main(int argc, char *argv[])
 	printf("%s\n", nout);
 	return (0);
 }
-
