@@ -1,6 +1,7 @@
 /**
  * op_add - compute sum of two ints
- * @a: int to add to b
+ * @a: int to add to a
+ * @b: int to add to a
  * Return: sum of a and b
  */
 int op_add(int a, int b)
@@ -44,9 +45,11 @@ int op_div(int a, int b)
 /**
  * op_mod - compute remainder of two ints
  * @a: int to mod with b
- * @b: int to mod a and b
+ * @b: int to mod a by
+ * Return: remainder of a and b
  */
 int op_mod(int a, int b)
 {
 	return (a % b);
 }
+
