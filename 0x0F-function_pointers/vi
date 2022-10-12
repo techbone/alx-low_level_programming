@@ -1,5 +1,0 @@
-/**
- * op_add - compute sum of two ints
- * @a: int to add to b
- * @b: int to add to a
- * R
