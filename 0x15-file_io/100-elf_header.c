@@ -9,6 +9,7 @@
  * @s1: the first string
  * @s2: the second string
  * @n: the max number of bytes to compare
+ *
  * Return: 0 if the first n bytes of s1 and s2 are equal, otherwise non-zero
  */
 int _strncmp(const char *s1, const char *s2, size_t n)
@@ -49,7 +50,7 @@ void _close(int fd)
 void _read(int fd, char *buf, size_t count)
 {
 	if (read(fd, buf, count) != -1)
-	return;
+		return;
 	write(STDERR_FILENO, "Error: Can't read from file\n", 28);
 	_close(fd);
 	exit(98);
@@ -68,7 +69,7 @@ void elf_magic(const unsigned char *buffer)
 		write(STDERR_FILENO, "Error: Not an ELF file\n", 23);
 		exit(98);
 	}
-	
+
 	printf("ELF Header:\n  Magic:   ");
 
 	for (i = 0; i < 16; ++i)
@@ -78,6 +79,7 @@ void elf_magic(const unsigned char *buffer)
 /**
  * elf_class - print ELF class
  * @buffer: the ELF header
+ *
  * Return: bit mode (32 or 64)
  */
 size_t elf_class(const unsigned char *buffer)
@@ -101,6 +103,7 @@ size_t elf_class(const unsigned char *buffer)
 /**
  * elf_data - print ELF data
  * @buffer: the ELF header
+ *
  * Return: 1 if big endian, otherwise 0
  */
 int elf_data(const unsigned char *buffer)
@@ -169,6 +172,15 @@ void elf_osabi(const unsigned char *buffer)
 		printf("%s\n", os_table[(unsigned int) buffer[EI_OSABI]]);
 	else
 		printf("<unknown: %x>\n", buffer[EI_OSABI]);
+}
+
+/**
+ * elf_abivers - print ELF ABI version
+ * @buffer: the ELF header
+ */
+void elf_abivers(const unsigned char *buffer)
+{
+	printf("  %-34s %u\n", "ABI Version:", buffer[EI_ABIVERSION]);
 }
 
 /**
@@ -246,6 +258,7 @@ void elf_entry(const unsigned char *buffer, size_t bit_mode, int big_endian)
  * main - copy a file's contents to another file
  * @argc: the argument count
  * @argv: the argument values
+ *
  * Return: Always 0
  */
 int main(int argc, const char *argv[])

@@ -8,6 +8,7 @@
 /**
  * _close - close a file descriptor and print an error message upon failure
  * @fd: the file descriptor to close
+ *
  * Return: 0 upon success, -1 upon failure
  */
 int _close(int fd)
@@ -16,6 +17,7 @@ int _close(int fd)
 		return (0);
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 	return (-1);
+
 }
 
 /**
@@ -24,6 +26,7 @@ int _close(int fd)
  * @fd: the file descriptor to read from
  * @buf: the buffer to write to
  * @count: the number of bytes to read
+ *
  * Return: The number of bytes read, or -1 upon failure
  */
 ssize_t _read(const char *filename, int fd, char *buf, size_t count)
@@ -42,6 +45,7 @@ ssize_t _read(const char *filename, int fd, char *buf, size_t count)
  * @fd: the file descriptor to write to
  * @buf: the buffer to read from
  * @count: the number of bytes to write
+ *
  * Return: The number of bytes written, or -1 upon failure
  */
 ssize_t _write(const char *filename, int fd, const char *buf, size_t count)
@@ -58,6 +62,7 @@ ssize_t _write(const char *filename, int fd, const char *buf, size_t count)
  * main - copy a file's contents to another file
  * @argc: the argument count
  * @argv: the argument values
+ *
  * Return: Always 1
  */
 int main(int argc, const char *argv[])
